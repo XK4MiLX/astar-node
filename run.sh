@@ -11,7 +11,6 @@ if [[ ! -d /root/astar ]]; then
   mkdir astar
 fi
 
-echo -e "Starting Astra Node: "
 NODE_NAME="AstraOnFlux-${RANDOM}"
 echo -e "Starting Astra Node: $NODE_NAME"
 astar-collator \
