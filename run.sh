@@ -6,7 +6,7 @@ if [[ ! -d /root/astar ]]; then
   mkdir astar
 fi
 
-NODE_NAME="AstarOnFlux-${RANDOM}"
+NODE_NAME="AstarOnFlux"
 echo -e "Starting Astar Node: $NODE_NAME"
 astar-collator \
   --pruning archive \
