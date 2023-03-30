@@ -9,11 +9,13 @@ fi
 NODE_NAME="AstarOnFlux"
 echo -e "Starting Astar Node: $NODE_NAME"
 astar-collator \
-  --pruning archive \
   --rpc-cors all \
   --name ${NODE_NAME} \
   --chain astar \
   --base-path /root/astar \
-  --execution Wasm \
+  --state-pruning archive \
+  --blocks-pruning archive \
   --rpc-external \
-  --ws-external
+  --ws-external \
+  --ws-max-connections 600 \
+  --enable-evm-rpc \
